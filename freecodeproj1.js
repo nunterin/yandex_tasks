@@ -18,7 +18,7 @@ function palindrome(str) {
 }
 
 
-palindrome("eye");
+console.log(palindrome("eye"));
 
 
 /*if (str == str1.join()) {

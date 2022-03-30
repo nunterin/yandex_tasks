@@ -27,13 +27,13 @@ function getRoute(object) {
     for (i = 0; i < object.length; i++) {
         j = 0
         k = 0
-        while (j < 3) {
+        while (j < object.length) {
             if (object[i].from != object[j].to) {
                 k += 1
             }
             j += 1
         }
-        if (k == 3) {
+        if (k == object.length) {
             obj[0] = object[i]
         }
     }

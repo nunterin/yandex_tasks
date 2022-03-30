@@ -7,15 +7,15 @@
   - второй аргумент может быть только строкой из одного символа
   - нельзя использовать регулярные выражения
 */
-k = "hfjdoj joklp"
-a = "j"
-console.log(k.length)
+k = "hfjdoj joklp";
+a = "j";
+console.log(k.length);
 
 function counter(str, char) {
     let c = 0;
     for (i = 0; i < str.length; i++) {
-        if (str[i] == char) {
-            c = c + 1;
+        if (str[i] === char) {
+            c++;
         }
     }
     return c;

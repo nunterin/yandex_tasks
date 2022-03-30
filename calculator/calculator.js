@@ -9,27 +9,27 @@ function calc(first, ...rest) {
     for (i = 0; i < rest.length; i += 2) {
         zn.push(rest[i])
     }
-    if (zn[0] == "+") {
+    if (zn[0] === "+") {
         l = oper[0] + oper[1]
-    } else if (zn[0] == "-") {
+    } else if (zn[0] === "-") {
         l = oper[0] - oper[1]
-    } else if (zn[0] == "/") {
+    } else if (zn[0] === "/") {
         l = oper[0] / oper[1]
-    } else if (zn[0] == "*") {
+    } else if (zn[0] === "*") {
         l = oper[0] * oper[1]
     }
 
     for (i = 1; i < rest.length / 2 + 1; i++) {
-        if (zn[i] == "+") {
+        if (zn[i] === "+") {
             l = l + oper[i + 1]
-        } else if (zn[i] == "-") {
+        } else if (zn[i] === "-") {
             l = l - oper[i + 1]
-        } else if (zn[i] == "/") {
+        } else if (zn[i] === "/") {
             l = l / oper[i + 1]
-        } else if (zn[i] == "*") {
+        } else if (zn[i] === "*") {
             l = l * oper[i + 1]
         }
     }
     return l
 }
-console.log(String(calc('2', '+', '0', '*', '8', '/', '2', '-', '5')))
+console.log(String(calc('2', '+', '2', '*', '8', '/', '2', '-', '5')))
